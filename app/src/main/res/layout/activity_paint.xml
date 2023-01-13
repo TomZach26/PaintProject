@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/pick_color_button"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="-340dp"
+            android:text="Pick Color" />
+
+        <Button
+            android:id="@+id/btnFill"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_color_button"
+            android:layout_marginLeft="118dp"
+            android:layout_marginTop="45dp"
+            android:text="Fill" />
+
+        <Button
+            android:id="@+id/btnNotFilled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_color_button"
+            android:layout_marginLeft="198dp"
+            android:layout_marginTop="45dp"
+            android:text="UnFill">
+
+        </Button>
+
+        <Button
+            android:id="@+id/thickorthin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_color_button"
+            android:layout_marginLeft="291dp"
+            android:layout_marginTop="45dp"
+            android:text="Width" />
+
+        <Button
+            android:id="@+id/AreaRemove"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_color_button"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="90dp"
+            android:text="Area Remove" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#4CAF50"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/btnBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGreen"
+        android:layout_alignLeft="@id/btnGreen"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnGreen"
+        android:backgroundTint="#3F51B5"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#3F51B5"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBlue"
+        android:layout_alignLeft="@id/btnBlue"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnBlue"
+        android:backgroundTint="#F44336"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#F44336"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnRed"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#FFEB3B"
+        android:textSize="20dp"
+        android:layout_below="@id/btnRed"
+        android:layout_alignLeft="@id/btnRed"/>
+
+
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addLine"
+        android:text="Line"
+        android:tag="Line"
+        android:layout_alignTop="@id/btnRect"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/btnLine"
+        android:onClick="addRect"
+        android:tag="Rect"
+        android:text="Rect"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addCircle"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnPath"
+        android:text="Circle"
+        android:textSize="16sp"/>
+    <Button
+        android:id="@+id/btnPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addPath"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnRect"
+        android:text="Path"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="683dp"
+        android:layout_toEndOf="@+id/btnCircle"
+        android:layout_toRightOf="@id/btnCircle"
+        android:background="@drawable/clear"
+        android:onClick="clear"
+        android:textSize="16sp" />
+
+</RelativeLayout>
